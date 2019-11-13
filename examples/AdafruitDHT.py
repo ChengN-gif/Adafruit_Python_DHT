@@ -31,7 +31,7 @@ def post_to_mcs(payload):
 		not_connected = 1
 		while (not_connected):
 			try:
-				conn = http.HTTPConnection("api.mediatek")
+				conn = http.HTTPConnection("api.mediatek.com:80")
 				conn.connected = 0
 			except (http.HTTPException, socket.error) as ex:
 				print("Error: %s" % ex)
